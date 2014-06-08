@@ -58,4 +58,4 @@ Run Tests
 
     ./configure.sh
     source venv/bin/activate
-    python manage.py test
+    python django_client_data/tests/manage.py test
