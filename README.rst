@@ -89,8 +89,8 @@ to the JavaScript global indicated by CLIENT_DATA_NAMESPACE.
 Todo
 ----
 
-* add a "context processors" feature to client data so custom values can be
-injected
+* Add a "context processors" feature to client data so custom values can be
+  injected
 
 Run Tests
 ---------
