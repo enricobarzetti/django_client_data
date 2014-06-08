@@ -43,22 +43,23 @@ def client_data(request):
         username = request.user.username
         full_name = request.user.get_full_name()
 
-    client_data = {}
-    standard_values = {
-        'user_pk': user_pk,
-        'username': username,
-        'user_full_name': full_name,
-        'url_name': url_name,
-        'url_args': url_args,
-        'url_kwargs': url_kwargs,
-        'csrftoken': get_token(request),
-        'STATIC_URL': settings.STATIC_URL,
-        'DEBUG': settings.DEBUG,
-    }
-    client_data.update(standard_values)
-    client_data.update(request.client_data)
+    ret = {}
+    if request.client_data.include_standard_values:
+        standard_values = {
+            'user_pk': user_pk,
+            'username': username,
+            'user_full_name': full_name,
+            'url_name': url_name,
+            'url_args': url_args,
+            'url_kwargs': url_kwargs,
+            'csrftoken': get_token(request),
+            'STATIC_URL': settings.STATIC_URL,
+            'DEBUG': settings.DEBUG,
+        }
+        ret.update(standard_values)
+    ret.update(request.client_data)
 
     return {
         'CLIENT_DATA_NAMESPACE': CLIENT_DATA_NAMESPACE,
-        'client_data': client_data,
+        'client_data': ret,
     }
