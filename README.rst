@@ -48,8 +48,8 @@ Mechanism
 ---------
 
 Django Client Data works by attaching a ``client_data`` attribute on the request
-object.  The ``client_data.html`` template attaches a ... to the JavaScript
-global indicated by CLIENT_DATA_NAMESPACE.
+object.  The ``client_data.html`` template attaches a ``client_data`` property
+to the JavaScript global indicated by CLIENT_DATA_NAMESPACE.
 
 Todo
 ----
