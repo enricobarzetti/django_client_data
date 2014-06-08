@@ -34,9 +34,43 @@ Install the app, middleware, and context processor
 Usage
 -----
 
-Call ``set_client_data()``.
+Call ``set_client_data()`` in your view to export values
 
-Include ``client_data.html`` in your page.
+.. code-block:: python
+
+    from django.views.generic import TemplateView
+    from django_client_data import set_client_data
+
+
+    class IndexView(TemplateView):
+        template_name = 'index.html'
+
+        def get(self, request, *args, **kwargs):
+            set_client_data(request, **{'foo': 'bar'})
+            return super(IndexView, self).get(request, *args, **kwargs)
+
+Include ``client_data.html`` in your page
+
+.. code-block:: django
+
+    {% include 'django_client_data/client_data.html' %}
+
+The JavaScript object ``DJANGO.client_data`` will look like
+
+.. code-block:: javascript
+
+    {
+        "DEBUG": False,
+        "STATIC_URL": "/static/",
+        "csrftoken": "gSlpOPyxHrdQH3KWUEkXx1wfyqGE7MDo",
+        "foo": "bar",
+        "url_args": [],
+        "url_kwargs": {},
+        "url_name": "index",
+        "user_full_name": None,
+        "user_pk": None,
+        "username": None
+    }
 
 Settings
 --------
