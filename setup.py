@@ -16,7 +16,7 @@ def read(fname):
 setup(
     name='django_client_data',
     version=app.__version__,
-    description='This allows Django to pass data to the browser.',
+    description='This allows Django to export JSON-compatible data to the browser.',
     long_description=read('README.rst'),
     license='The MIT License',
     platforms=['OS Independent'],

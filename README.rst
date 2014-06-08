@@ -1,7 +1,8 @@
 Django Client Data
 ==================
 
-This allows Django to pass data to the browser.
+This allows Django to export JSON-compatible data to the browser.  The
+client-side code accesses the data as a JavaScript object.
 
 Installation
 ------------
