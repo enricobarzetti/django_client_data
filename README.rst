@@ -28,7 +28,7 @@ Install the app, middleware, and context processor
 
     TEMPLATE_CONTEXT_PROCESSORS = (
         ...
-        'django_client_data.context_processors.client_data_context_processor',
+        'django_client_data.context_processors.client_data',
     )
 
 Usage

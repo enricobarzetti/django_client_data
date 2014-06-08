@@ -6,7 +6,7 @@ from django.middleware.csrf import get_token
 from app_settings import CLIENT_DATA_NAMESPACE
 
 
-def client_data_context_processor(request):
+def client_data(request):
     """
     Put the values in client data into the context.
     The following values are also added:
