@@ -1,4 +1,4 @@
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 
 
 def set_client_data(request, **kwargs):
