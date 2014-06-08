@@ -75,8 +75,9 @@ The JavaScript object ``DJANGO.client_data`` will look like
 Settings
 --------
 
-CLIENT_DATA_NAMESPACE, defaults to 'DJANGO', the data is a property of this name
-named 'client_data'.
+CLIENT_DATA_NAMESPACE (defaults to 'DJANGO') is the JavaScript global that will
+be created as the namespace to contain the client data.  The data is a property
+of this global and is named 'client_data'.
 
 Mechanism
 ---------
