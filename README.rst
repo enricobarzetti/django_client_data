@@ -12,7 +12,7 @@ To get the latest stable release from PyPi
 
     pip install django_client_data
 
-Add ``django_client_data`` to your ``INSTALLED_APPS``
+Install the app, middleware, and context processor
 
 .. code-block:: python
 
@@ -21,9 +21,15 @@ Add ``django_client_data`` to your ``INSTALLED_APPS``
         'django_client_data',
     )
 
-Install middleware.
+    MIDDLEWARE_CLASSES = (
+        ...
+        'django_client_data.middleware.ClientDataMiddleware',
+    )
 
-Install context processor.
+    TEMPLATE_CONTEXT_PROCESSORS = (
+        ...
+        'django_client_data.context_processors.client_data_context_processor',
+    )
 
 Usage
 -----
