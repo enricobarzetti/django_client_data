@@ -60,16 +60,16 @@ The JavaScript object ``DJANGO.client_data`` will look like
 .. code-block:: javascript
 
     {
-        "DEBUG": False,
+        "DEBUG": false,
         "STATIC_URL": "/static/",
         "csrftoken": "gSlpOPyxHrdQH3KWUEkXx1wfyqGE7MDo",
         "foo": "bar",
         "url_args": [],
         "url_kwargs": {},
         "url_name": "index",
-        "user_full_name": None,
-        "user_pk": None,
-        "username": None
+        "user_full_name": null,
+        "user_pk": null,
+        "username": null
     }
 
 Settings
